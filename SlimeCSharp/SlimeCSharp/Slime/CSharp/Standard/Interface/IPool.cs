@@ -1,4 +1,4 @@
-﻿namespace Slime.CSharp {
+﻿namespace Slime.Standard {
 	public interface IPool<T> {
 		bool IsReusable();
 		T GetObject();

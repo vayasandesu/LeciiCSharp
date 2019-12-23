@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Slime.CSharp {
+namespace Slime.Standard {
 
 	public static class ObjectExtension {
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Slime.CSharp {
+namespace Slime.Standard {
 
 	public static class StringHelper {
 

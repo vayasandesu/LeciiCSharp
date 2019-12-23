@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Slime.CSharp {
+namespace Slime.Standard {
 
     public static class ListExtension {
 		

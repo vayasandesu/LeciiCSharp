@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Slime.CSharp {
+namespace Slime.Standard {
 
 	public static class EncryptExtension {
 
