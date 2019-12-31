@@ -1,8 +1,8 @@
 ﻿
-namespace SWork.Legacy.Coordinate {
+namespace Slime.Standard.Coordinate {
 
 
-	public static class CoordinateExtension {
+	public static class Coordinate2DExtension {
 
 		/// <summary>
 		/// check the rectangle is overlap
@@ -12,7 +12,7 @@ namespace SWork.Legacy.Coordinate {
 		/// <param name="tl_b">top left of second rectangle</param>
 		/// <param name="br_b">bottom right of second rectangle</param>
 		/// <returns>true if overlap</returns>
-		public static bool IsRectOverlap(Point tl_a, Point br_a, Point tl_b, Point br_b) {
+		public static bool IsRectOverlap(Point2D tl_a, Point2D br_a, Point2D tl_b, Point2D br_b) {
 			// If one rectangle is on left side of other  
 			if(tl_a.X > br_b.X || tl_b.X > br_a.X) {
 				return false;
