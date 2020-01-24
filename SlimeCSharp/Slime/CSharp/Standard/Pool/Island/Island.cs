@@ -23,11 +23,7 @@ namespace Slime.Standard {
 			_lazyWorker = new Stack<T>();
 			_activeWorker = new HashSet<T>();
 		}
-
-		public Island(Func<T> birthSolution) : this(){
-			_birthSolution = birthSolution.Invoke;
-		}
-
+		
 		public Island(CreationEventHandler<T> birthSolution) : this() {
 			_birthSolution = birthSolution;
 		}
