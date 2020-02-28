@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlimeCSharp", "SlimeCSharp\SlimeCSharp.csproj", "{F028E46E-ED4F-42BE-B8CE-1D99A90A60EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlimeCSharp", "SlimeCSharp\SlimeCSharp.csproj", "{F028E46E-ED4F-42BE-B8CE-1D99A90A60EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlimeCSharpTester", "SlimeCSharpTester\SlimeCSharpTester.csproj", "{67041526-4750-4CBB-95F1-DF163EF26D03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F028E46E-ED4F-42BE-B8CE-1D99A90A60EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F028E46E-ED4F-42BE-B8CE-1D99A90A60EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F028E46E-ED4F-42BE-B8CE-1D99A90A60EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67041526-4750-4CBB-95F1-DF163EF26D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67041526-4750-4CBB-95F1-DF163EF26D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67041526-4750-4CBB-95F1-DF163EF26D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67041526-4750-4CBB-95F1-DF163EF26D03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
