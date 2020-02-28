@@ -1,3 +1,5 @@
+using System;
+
 namespace Slime.Standard {
 	
 	public static class GeneratorUtility {

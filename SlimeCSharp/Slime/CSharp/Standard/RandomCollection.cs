@@ -56,7 +56,7 @@ namespace Slime.Standard {
 
 		public T Random() {
 			float totalRate = _totalChance;
-			var weight = RandomUtility.Random(0.0f, totalRate);
+			var weight = RandomUtility.Range(0.0f, totalRate);
 
 			if (_pools.Count <= 0)
 				return default(T);

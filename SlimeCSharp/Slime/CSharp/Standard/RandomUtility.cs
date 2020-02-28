@@ -26,14 +26,21 @@ namespace Slime.Standard {
 			}
 		}
 
-		public static float Random(float from, float to) {
+		public static float Range(float from, float to) {
 			float range = to - from;
 			var value = (float)RANDOM.NextDouble() * range;
 
 			return value + from;
 		}
 
-	    public static string RandomString(int len = 1) {
+		public static float Range(int from, int to) {
+			float range = to - from;
+			var value = RANDOM.Next() * range;
+
+			return (int)(value) + from;
+		}
+
+		public static string RandomString(int len = 1) {
 		    string s = "";
 		    for(int i = 0 ; i < len ; i++ ) {
 			    s += Convert.ToChar(Convert.ToInt32(Math.Floor(26 * RANDOM.NextDouble() + 65)));
@@ -48,7 +55,7 @@ namespace Slime.Standard {
 	    private static DateTime _startDate = new DateTime(2000, 1, 1);
 
 		public static bool RandomBool() {
-			return Random(0.0f, 1.0f) < 0.5f;
+			return Range(0.0f, 1.0f) < 0.5f;
 		}
 
 		public static DateTime RandomDateTime() {
