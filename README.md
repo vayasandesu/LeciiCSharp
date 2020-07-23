@@ -1,4 +1,4 @@
-# SlimeCSharp
+# Lecii C#
 Lazy extension and helper for C# 
 
 
