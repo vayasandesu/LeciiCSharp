@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Lecii.Math {
+namespace Lecii.Mathematics {
 
-	using Maths = System.Math;
+	using Math = System.Math;
 
 	public static class MathExtension {
 
@@ -11,9 +11,9 @@ namespace Lecii.Math {
 		}
 
 		public static bool NearlyEqual(double a, double b, double epsilon = 0.000001d) {
-			double absA = Maths.Abs(a);
-			double absB = Maths.Abs(b);
-			double diff = Maths.Abs(a - b);
+			double absA = Math.Abs(a);
+			double absB = Math.Abs(b);
+			double diff = Math.Abs(a - b);
 
 			if (a == b) { // shortcut, handles infinities
 				return true;

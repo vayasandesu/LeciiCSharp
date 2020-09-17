@@ -5,6 +5,7 @@ namespace Lecii {
 
 	public static class CollectionExtension {
 		
+		[Obsolete("Use Generator.Generate() instead")]
 		public static T[] GenerateObjects<T>(int count, Func<T> creationFunction) {
 			var list = new T[count];
 
