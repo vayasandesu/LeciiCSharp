@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lecii.Standard {
+namespace Lecii.Collection {
 
 	public static class ArrayExtension {
 

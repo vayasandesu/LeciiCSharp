@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lecii.Standard {
+namespace Lecii {
 
 	public static class ObjectExtension {
 

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace Lecii.Standard {
+namespace Lecii.Collection {
 
 	public static class EnumerableExtension {
 		
 		/// <summary>
 		/// looping to find object at index
 		/// </summary>
-		public static T GetFromIndex<T>(this IEnumerable<T> data, int index) {
+		public static T At<T>(this IEnumerable<T> data, int index) {
 			if (data == null)
 				return default(T);
 
@@ -26,14 +25,14 @@ namespace Lecii.Standard {
 		/// <summary>
 		/// get first index of object that equal predicate
 		/// </summary>
-		public static int IndexOf<T>(this IEnumerable<T> dataset, Predicate<T> predicate) {
+		public static int IndexOf<T>(this IEnumerable<T> data, Predicate<T> predicate) {
 			
 			if (predicate == null) {
 				return -1;
 			}
 
 			int index = -1;
-			foreach (var obj in dataset) {
+			foreach (var obj in data) {
 				index++;
 				if (predicate.Invoke(obj)) {
 					return index;
@@ -46,7 +45,7 @@ namespace Lecii.Standard {
 		/// <summary>
 		/// get first object that equal predicate
 		/// </summary>
-		public static List<T> FindAll<T>(this IEnumerable<T> dataset, Predicate<T> predicate) {
+		public static IEnumerable<T> FindAll<T>(this IEnumerable<T> dataset, Predicate<T> predicate) {
 
 			var list = new List<T>();
 
@@ -63,8 +62,12 @@ namespace Lecii.Standard {
 			return list;
 
 		}
-
-
+		
+		public static void ForEach<T>(this IEnumerable<T> data, Action<T> action) {
+			foreach(T d in data) {
+				action.Invoke(d);
+			}
+		}
 
 	}
 

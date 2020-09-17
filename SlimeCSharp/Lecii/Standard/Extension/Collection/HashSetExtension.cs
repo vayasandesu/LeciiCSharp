@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Lecii.Standard {
+namespace Lecii.Collection {
 	public static class HashSetExtension {
 		
 		/// <summary>
@@ -17,10 +17,10 @@ namespace Lecii.Standard {
 		}
 
 		/// <summary>
-		/// add or replace value to hash
+		/// Add new data to collection
 		/// </summary>
 		/// <returns>true if value exist and replaced, false if value are add only</returns>
-		public static bool Replace<T>(this HashSet<T> hash, T value) {
+		public static bool Overwrite<T>(this HashSet<T> hash, T value) {
 			if (hash.Contains(value)) {
 				hash.Remove(value);
 				hash.Add(value);
@@ -32,7 +32,7 @@ namespace Lecii.Standard {
 		}
 
 		/// <summary>
-		/// add unique value to data set.
+		/// add value to data set.
 		/// </summary>
 		public static void Add<T>(this HashSet<T> data, IEnumerable<T> values) {
 			foreach(var e  in values) {

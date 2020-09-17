@@ -1,49 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lecii.Standard {
+namespace Lecii.Collection {
 
 	public static class DictionaryExtension {
 
 		/// <summary>
-		/// get value from collection
-		/// if key not exist, will add the initialize value to colllection and return that value
+		/// Get value if value exist, otherwise return defult value of type
 		/// </summary>
-		public static TValue GetOrAdd<TKey, TValue>(this Dictionary<TKey, TValue> collection, TKey key, TValue initialValue) {
-			if (!collection.ContainsKey(key)) {
-				collection.Add(key, initialValue);
-			}
-
-			return collection[key];
+		/// <returns></returns>
+		public static TValue GetOrDefault<TKey, TValue>(this Dictionary<TKey, TValue> data, TKey key) {
+			if(data.ContainsKey(key))
+				return data[key];
+			else
+				return default(TValue);
 		}
 
 		/// <summary>
-		/// Get value in collection.
-		/// if key not exist will return default value without change the collection.
+		/// If Key doesn't exist then add data to collection.
+		/// otherwise do nothing.
 		/// </summary>
-		/// <param name="defualtValue">return this value if key not exist</param>
-		public static TValue Get<TKey, TValue>(this Dictionary<TKey, TValue> collection, TKey key, TValue defualtValue) {
-			TValue value;
-			if(!collection.TryGetValue(key, out value)) {
-				return defualtValue;
-			} else {
-				return value;
+		/// <returns>true when data have added</returns>
+		public static bool TryAdd<TKey, TValue>(this Dictionary<TKey, TValue> data, TKey key, TValue value) {
+			if(!data.ContainsKey(key)) {
+				data.Add(key, value);
+				return true;
 			}
-		}
 
+			return false;
+		}
+		
 		/// <summary>
-		/// add or replace new value.
+		/// Write data to collection either data exist or not
 		/// </summary>
 		/// <param name="useNew">if is false and value are exist. not replace the value</param>
-		public static void Replace<TKey, TValue>(this Dictionary<TKey, TValue> collection, TKey key, TValue value, bool useNew = true) {
-			if (collection == null)
-				return;
+		public static void Overwrite<TKey, TValue>(this Dictionary<TKey, TValue> collection, TKey key, TValue value) {
 
 			if (!collection.ContainsKey(key)) {
 				collection.Add(key, value);
 			} else {
-				if(useNew)
-					collection[key] = value;
+				collection[key] = value;
 			}
 
 		}

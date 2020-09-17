@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SlimeCSharp\SlimeCSharp.csproj" />
+    <ProjectReference Include="..\SlimeCSharp\Lecii.csproj" />
   </ItemGroup>
 
 </Project>

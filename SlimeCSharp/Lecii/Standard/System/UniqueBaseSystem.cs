@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lecii.Standard {
+namespace Lecii {
 
 	/// <summary>
 	/// For create singelton instance when need to use
