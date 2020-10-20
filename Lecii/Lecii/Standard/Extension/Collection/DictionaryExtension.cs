@@ -34,12 +34,15 @@ namespace Lecii.Collection {
 		/// Write data to collection either data exist or not
 		/// </summary>
 		/// <param name="useNew">if is false and value are exist. not replace the value</param>
-		public static void Overwrite<TKey, TValue>(this Dictionary<TKey, TValue> collection, TKey key, TValue value) {
+		/// <returns>true if it overwrite value</returns>
+		public static bool Overwrite<TKey, TValue>(this Dictionary<TKey, TValue> collection, TKey key, TValue value) {
 
 			if (!collection.ContainsKey(key)) {
 				collection.Add(key, value);
+				return false;
 			} else {
 				collection[key] = value;
+				return true;
 			}
 
 		}

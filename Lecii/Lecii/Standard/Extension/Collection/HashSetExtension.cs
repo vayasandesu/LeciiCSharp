@@ -32,7 +32,7 @@ namespace Lecii.Collection {
 		}
 
 		/// <summary>
-		/// add value to data set.
+		/// add value to data set if not exist.
 		/// </summary>
 		public static void Add<T>(this HashSet<T> data, IEnumerable<T> values) {
 			foreach(var e  in values) {

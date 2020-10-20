@@ -10,7 +10,7 @@ namespace Lecii.Collection {
 		/// </summary>
 		/// <param name="value">instance</param>
 		/// <param name="copy">amount of instance</param>
-		public static void Add<T>(this List<T> list, T value, int copy) where T : struct {
+		public static void AddCopy<T>(this List<T> list, T value, int copy=1) where T : struct {
 			for(int i = 0; i < copy; i++) {
 				list.Add(value);
 			}

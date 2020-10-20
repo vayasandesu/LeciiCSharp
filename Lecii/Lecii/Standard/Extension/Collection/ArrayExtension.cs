@@ -9,7 +9,7 @@ namespace Lecii.Collection {
         /// - null array (return null)
         /// - index out of bound (return null)
         /// </summary>
-        public static T GetIndex<T>(this T[] array, int index) {
+        public static T At<T>(this T[] array, int index) {
             if (array == null) {
                 return default(T);
             }
@@ -26,7 +26,7 @@ namespace Lecii.Collection {
             }
             int len = array.Length;
             for(int i = 0; i<len; i++) {
-                var obj = array.GetIndex(i);
+                var obj = array.At(i);
                 if (predicate.Invoke(obj)) {
                     return obj;
                 }
