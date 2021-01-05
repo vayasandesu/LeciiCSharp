@@ -16,11 +16,13 @@ namespace Lecii {
 
 			return list;
 		}
-		
+
+		[Obsolete("use Linq.Select instead")]
 		public static Tout Map<Tin, Tout>(this Tin data, Func<Tin, Tout> convertFunction) {
 			return convertFunction(data);
 		}
 
+		[Obsolete("use Linq.Select instead")]
 		/// <summary>
 		/// Convert object from type Tin to Tout type
 		/// </summary>
