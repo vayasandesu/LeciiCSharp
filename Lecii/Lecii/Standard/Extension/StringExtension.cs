@@ -5,12 +5,16 @@ namespace Lecii.Standard {
 
 	public static class StringExtension {
 
+		public static string DefaultIfEmpty(this string value, string ifEmpty) {
+			return string.IsNullOrEmpty(value) ? ifEmpty : value;
+		}
+
         /// <summary>
         /// return empty string or string.
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string SafeNull(this string value) {
+        public static string ToStringOrEmpty(this string value) {
             if (value == null) {
                 return "";
             }
